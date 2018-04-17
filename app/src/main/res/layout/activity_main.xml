@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/bg_color"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/activity_main_btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="25sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp" />
+
+    <Button
+        android:id="@+id/activity_main_btn_linkedin_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/activity_main_btn_login"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal|center"
+        android:background="@color/bg_color"
+        android:drawableLeft="@drawable/linkedin_button"
+        android:drawablePadding="5dp"
+        android:text="Continue with Linkedin"
+        android:textAllCaps="false"
+        android:textColor="@color/text_color"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:onClick="loginLinkedin"
+        style="?android:attr/borderlessButtonStyle" />
+
+    <RelativeLayout
+        android:id="@+id/activity_main_rl_profile_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/activity_main_btn_linkedin_login"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="20dp">
+        <TextView
+            android:id="@+id/activity_main_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:text="@string/name"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="@string/name"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:visibility="gone"/>
+</RelativeLayout>
